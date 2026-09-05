@@ -85,7 +85,7 @@ check_system_errors(){
     echo "System Error Intelligence:"
     echo
 
-    # Soft Lockup
+    
     local soft_lockups
     soft_lockups=$(printf "%s\n" "$logs" | grep "soft lockup")
 
@@ -111,7 +111,7 @@ check_system_errors(){
     fi
 
 
-    # RCU Stall
+  
     local rcu_stalls
     rcu_stalls=$(printf "%s\n" "$logs" |
         grep "rcu_preempt self-detected stall on CPU")
@@ -121,7 +121,7 @@ check_system_errors(){
     fi
 
 
-    # Failed Services
+   
     local service_failures
     service_failures=$(printf "%s\n" "$logs" | grep "Failed to start")
 
@@ -136,7 +136,7 @@ check_system_errors(){
     fi
 
 
-    # Watchdog
+   
     local watchdog
     watchdog=$(printf "%s\n" "$logs" | grep "Watchdog timeout")
 
@@ -148,7 +148,7 @@ check_system_errors(){
     fi
 
 
-    # Driver Errors
+    
     local driver_errors
     driver_errors=$(printf "%s\n" "$logs" | grep "\*ERROR\*")
 
@@ -160,7 +160,7 @@ check_system_errors(){
     fi
 
 
-    # Network Errors
+   
     local network_errors
     network_errors=$(printf "%s\n" "$logs" | grep "Connection refused")
 
@@ -172,7 +172,7 @@ check_system_errors(){
     fi
 
 
-    # Block Device Errors
+   
     local block_errors
     block_errors=$(printf "%s\n" "$logs" | grep "Can.t open blockdev")
 
@@ -184,7 +184,7 @@ check_system_errors(){
     fi
 
 
-    # Daemon Errors
+   
     local daemon_errors
     daemon_errors=$(printf "%s\n" "$logs" | grep "unable to locate daemon")
 
@@ -196,7 +196,7 @@ check_system_errors(){
     fi
 
 
-    # TTY Errors
+    
     local tty_errors
     tty_errors=$(printf "%s\n" "$logs" | grep "get tty for session")
 
